@@ -23,9 +23,12 @@ export default function TextForm(props) {
       setText(newText)
   }
   const extractEmails = () => {
-    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi);
+    return text.match();
+    
     }
   
+  
+
     const handleOnChange = (event)=>{
       //console.log("On change");
       setText(event.target.value);
@@ -33,6 +36,7 @@ export default function TextForm(props) {
 
 
     const [text, setText] = useState('');
+   
     //text = "new text"; //Wrong way to change the state
     //setText("new text"); // Correct way to change the state
     
