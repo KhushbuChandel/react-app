@@ -22,6 +22,10 @@ export default function TextForm(props) {
 
       setText(newText)
   }
+  const extractEmails = () => {
+    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi);
+    }
+  
     const handleOnChange = (event)=>{
       //console.log("On change");
       setText(event.target.value);
@@ -46,6 +50,7 @@ export default function TextForm(props) {
   <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
   <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
   <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
+  <button className="btn btn-primary my-3" onClick={extractEmails}>Extract Emails</button> 
     </div>
     <div className="container my-3">
       <h2>Here is the Text Summary!!</h2>
@@ -53,6 +58,7 @@ export default function TextForm(props) {
       <p>{0.08*text.split(" ").length} Minutes read</p>
     <h2>Preview</h2>
     <p>{text}</p>
+    {/* <p>Emails: {extractEmails}</p> */}
     </div>
     </>
   )
