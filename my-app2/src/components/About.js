@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function About() {
-    let myStyle={
+
+    const [myStyle, setMyStyle]= useState({
         color: 'white',
         backgroundColor: 'black'
+    })
+    toggleStyle=()=>{
+        if(myStyle.color == 'white'){
+            setMyStyle({
+                color: 'black',
+        backgroundColor: 'white'
+    
+            })
+        }
+        else{
+            setMyStyle({
+                color: 'white',
+        backgroundColor: 'black'
+    
+            })
+
+        }
     }
   return (
         <>
@@ -48,7 +66,7 @@ export default function About() {
     </div>
     </div>
     <div className="container my-3">
-        <button type="button" className="btn btn-primary">Enable dark mode </button>
+        <button onClick={toggleStyle} type="button" className="btn btn-primary">Enable dark mode </button>
     </div>
 
         </div>
