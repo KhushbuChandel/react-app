@@ -23,9 +23,13 @@ export default function TextForm(props) {
       setText(newText)
   }
   const extractEmails = () => {
-    return text.match();
-    
+    let emails = text.match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi);
+    if (emails) {
+        setExtractedEmails(emails.join(", "));
+    } else {
+        setExtractedEmails("No emails found");
     }
+}
   
   
 
@@ -36,6 +40,7 @@ export default function TextForm(props) {
 
 
     const [text, setText] = useState('');
+    const [extractedEmails, setExtractedEmails] = useState('');
    
     //text = "new text"; //Wrong way to change the state
     //setText("new text"); // Correct way to change the state
@@ -62,7 +67,7 @@ export default function TextForm(props) {
       <p>{0.08*text.split(" ").length} Minutes read</p>
     <h2>Preview</h2>
     <p>{text}</p>
-    {/* <p>Emails: {extractEmails}</p> */}
+    <p>Emails: {extractedEmails}</p>
     </div>
     </>
   )
