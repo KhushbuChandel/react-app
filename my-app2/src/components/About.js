@@ -9,10 +9,10 @@ export default function About() {
         <>
         <h1 className="my-2">About Us</h1>
         <div className="container" style={myStyle} >
-            <div className="accordion" id="accordionExample">
+            <div className="accordion" id="accordionExample" style={myStyle}>
     <div className="accordion-item">
         <h2 className="accordion-header">
-        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={myStyle}>
             Accordion Item #1
         </button>
         </h2>
@@ -24,7 +24,7 @@ export default function About() {
     </div>
     <div className="accordion-item">
         <h2 className="accordion-header">
-        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={myStyle}>
             Accordion Item #2
         </button>
         </h2>
@@ -36,7 +36,7 @@ export default function About() {
     </div>
     <div className="accordion-item">
         <h2 className="accordion-header">
-        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={myStyle}>
             Accordion Item #3
         </button>
         </h2>
